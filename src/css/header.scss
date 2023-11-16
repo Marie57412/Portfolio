@@ -1,0 +1,21 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+      padding: 1% 7% 2px 7%;
+      align-items: baseline;
+  background: linear-gradient(to bottom, #f50052 0%, #ffffff 6%);
+  
+      color: #FF5C33;
+  }
+  
+  
+  .nav {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+  
+    a {
+      padding: 17px;
+    color: #FF5C33;
+    }
+  }
