@@ -1,10 +1,11 @@
-import './css/App.scss';
+import './scss/App.scss';
 import Header from './Components/Header';
 import Banniere from './Components/Banniere';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App border">
+      
       <Header />
       <Banniere />
     </div>

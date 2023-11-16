@@ -1,0 +1,28 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1% 7% 2px 7%;
+  align-items: baseline;
+  background: linear-gradient(to right, #75b9ff 0%, #050a29  100%);
+  
+   
+      .header-title{
+        font-family: 'Bungee Shade', sans-serif;
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }    
+
+}
+  
+  
+  .nav {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+  
+    a {
+      padding: 17px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    }
+  }
