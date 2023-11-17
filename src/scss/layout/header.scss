@@ -1,28 +1,80 @@
 .header {
   display: flex;
   justify-content: space-between;
-  padding: 1% 7% 2px 7%;
+  padding: 0 7% 0 7%;
   align-items: baseline;
-  background: linear-gradient(to right, #75b9ff 0%, #050a29  100%);
+  background: rgb(13,30,134);
+background: linear-gradient(180deg, rgba(13,30,134,1) 0%, rgba(17,16,38,1) 51%);
   
    
       .header-title{
         font-family: 'Bungee Shade', sans-serif;
         color: white;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        text-shadow: 2px 2px 4px rgb(0 229 255);
       }    
 
 }
-  
-  
-  .nav {
-    display: flex;
-    justify-content: flex-end;
-    flex-direction: row;
-  
-    a {
-      padding: 17px;
-    color: white;
-    font-family: 'Roboto', sans-serif;
-    }
-  }
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+}
+
+.nav a {
+  position: relative;
+  color: white;
+  font-size: 18px;
+  font-family: Roboto;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding-left: 5px;
+  margin: 21px;
+  padding: 6px;
+}
+
+.nav a::before,
+.nav a::after,
+.nav a span::before,
+.nav a span::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: transparent;
+  transition: 1s;
+}
+
+.nav a::before {
+  top: -2px;
+  left: -2px;
+  border-top: 2px solid rgb(0, 255, 234);
+  border-left: 2px solid rgb(0, 255, 234);
+}
+.nav a::after {
+  top: -2px;
+  right: -2px;
+  border-top: 2px solid rgb(255, 255, 255);
+  border-right: 2px solid rgb(255, 255, 255);
+}
+
+.nav a span::before {
+  bottom: -2px;
+  left: -2px;
+  border-bottom: 2px solid rgb(255, 255, 255);
+  border-left: 2px solid rgb(255, 255, 255);
+}
+.nav a span::after {
+  bottom: -2px;
+  right: -2px;
+  border-bottom: 2px solid rgb(0, 255, 234);
+  border-right: 2px solid rgb(0, 255, 234);
+}
+
+.nav a:hover::before,
+.nav a:hover::after,
+.nav a:hover span::before,
+.nav a:hover span::after {
+  width: 50px;
+  height: 20px;
+}
