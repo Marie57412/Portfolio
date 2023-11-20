@@ -1,6 +1,7 @@
 import './scss/App.scss';
 import Header from './Components/Header';
 import Banniere from './Components/Banniere';
+import Project from './Components/Project';
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       
       <Header />
       <Banniere />
+      <Project />
     </div>
   );
 }
