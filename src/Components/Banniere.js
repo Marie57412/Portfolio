@@ -1,4 +1,5 @@
 import React from "react";
+import Avatar from "../assets/Avatar.png"
 
 
 function Banniere() {
@@ -10,7 +11,7 @@ function Banniere() {
                 Proin vel purus vitae nulla laoreet malesuada in id nisi."
             </p>
             </div>
-            <img src={"##"} alt="image de ma tete"></img>
+            <img src={Avatar} alt="image de ma tete"></img>
         </section>
     )
 }

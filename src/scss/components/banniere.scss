@@ -1,18 +1,44 @@
 /*Bannière*/
-.section_banniere{
+.section_banniere {
   display: flex;
   align-items: center;
+  justify-content: center;
+  background: #fbcbc9;
+  height: 56rem;
 }
 
 
-  .banniere_p{
-    color: black;
-    font-size: 30px;
-  }
-  
+.banniere_p {
+  color: black;
+  font-size: 30px;
+}
 
-  .cadre-text{
-    border: 5px solid black;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-    width: 20%;
+
+.cadre-text {
+  position: relative;
+  background-color: #fff;
+  border-radius: 10px;
+  border: 2px solid #000;
+  padding: 15px;
+  width: 27%;
+  margin: 20px;
+
+  &::before {
+
+    content: "";
+    position: absolute;
+    width: 10px;
+    /* Largeur de la flèche */
+    height: 10px;
+    /* Hauteur de la flèche */
+    background-color: #fff;
+    /* Fond de la flèche */
+    border-left: 2px solid #000;
+    /* Bordure gauche de la flèche */
+    border-bottom: 2px solid #000;
+    /* Bordure basse de la flèche */
+    transform: rotate(-135deg);
+    top: 78%;
+    right: -8px;
   }
+}
