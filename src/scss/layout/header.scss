@@ -3,15 +3,15 @@
   justify-content: space-between;
   padding: 0 7% 0 7%;
   align-items: baseline;
-  background: #e75874;
+  background: #031163;
 box-shadow: 10px 3px 5px rgba(0, 0, 0, 0.5);
 
   
    
       .header-title{
-        font-family: 'Bungee Shade', sans-serif;
-        color: white;
-        text-shadow: 2px 2px 4px rgb(0 229 255);
+        font-family: Roboto, sans-serif;
+        color: #1fbfb8;
+        text-shadow: 2px 2px 4px rgb(0, 0, 0);
       }    
 
 }
@@ -24,11 +24,13 @@ box-shadow: 10px 3px 5px rgba(0, 0, 0, 0.5);
 
 .nav a {
   position: relative;
-  color: white;
-  font-size: 18px;
-  font-family: Roboto;
+  color: #1fbfb8;
+  text-shadow: 2px 2px 4px black;
+  font-size: 18px ;
+  font-family: Roboto, bold;
   text-transform: uppercase;
   text-decoration: none;
+  font-weight: 700;
   padding-left: 5px;
   margin: 21px;
   padding: 6px;
@@ -49,27 +51,27 @@ box-shadow: 10px 3px 5px rgba(0, 0, 0, 0.5);
 .nav a::before {
   top: -2px;
   left: -2px;
-  border-top: 2px solid rgb(0, 255, 234);
-  border-left: 2px solid rgb(0, 255, 234);
+  border-top: 2px solid #05716c;
+  border-left: 2px solid #05716c;
 }
 .nav a::after {
   top: -2px;
   right: -2px;
-  border-top: 2px solid rgb(255, 255, 255);
-  border-right: 2px solid rgb(255, 255, 255);
+  border-top: 2px solid #1978a5;
+  border-right: 2px solid #1978a5;
 }
 
 .nav a span::before {
   bottom: -2px;
   left: -2px;
-  border-bottom: 2px solid rgb(255, 255, 255);
-  border-left: 2px solid rgb(255, 255, 255);
+  border-bottom: 2px solid #1978a5;
+  border-left: 2px solid #1978a5;
 }
 .nav a span::after {
   bottom: -2px;
   right: -2px;
-  border-bottom: 2px solid rgb(0, 255, 234);
-  border-right: 2px solid rgb(0, 255, 234);
+  border-bottom: 2px solid #05716c;
+  border-right: 2px solid #05716c;
 }
 
 .nav a:hover::before,

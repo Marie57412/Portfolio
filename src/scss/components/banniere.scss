@@ -1,11 +1,20 @@
 /*Bannière*/
 .section_banniere {
+ 
+  background: url(../../assets//palmier.avif);
+  height: 20rem;
+    width: 100%;
+}
+
+.texte-avatar{
+
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  background: #fbcbc9;
-  height: 56rem;
+  padding-top: 19%;
 }
+
 
 
 .banniere_p {
