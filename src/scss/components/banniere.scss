@@ -13,6 +13,11 @@
   align-items: center;
   justify-content: center;
   padding-top: 19%;
+
+  @media screen and (max-width: 1024px){
+    padding-top: 31%;
+  }
+
 }
 
 
