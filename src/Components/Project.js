@@ -1,17 +1,18 @@
 import React, { useState, useEffect } from 'react';
+import ProjectCard from './Card';
 
 function Project(){
 
   const [repos, setRepos] = useState([]);
 
   useEffect(() => {
-    const token = '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';
+    const token = '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';
     const headers = {
       Authorization: `token ${token}`,
       Accept: 'application/vnd.github.v3+json',
     };
 
-    fetch('https://api.github.com/user/repos', { headers })
+    fetch('https://api.github.com/user/repos?type=public', { headers })
       .then((response) => response.json())
       .then((data) => {
         setRepos(data);
@@ -20,16 +21,17 @@ function Project(){
         console.error('Error fetching data:', error);
       });
   }, []);
+  
     return(
-       <section className='project'>
-        <h2>Mes projets</h2>
-        <ul>
+        <section className='project'>
+      <h2>Mes projets</h2>
+      <div className="card-container">
         {repos.map((repo) => (
-          <li key={repo.id}>{repo.name}</li>
+          <ProjectCard key={repo.id} repo={repo} />
         ))}
-      </ul>
-       </section>
-    )
+      </div>
+    </section>
+  );
 }
 
 export default Project
