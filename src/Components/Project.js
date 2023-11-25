@@ -7,20 +7,38 @@ function Project(){
 
   useEffect(() => {
     const token = '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';
-    const headers = {
-      Authorization: `token ${token}`,
-      Accept: 'application/vnd.github.v3+json',
-    };
+    const query = `
+      query {
+        viewer {
+          repositories(first: 100, ownerAffiliations: OWNER, privacy: PUBLIC) {
+            nodes {
+              id
+              name
+              description
+              # Ajoutez d'autres champs si nécessaire
+            }
+          }
+        }
+      }
+    `;
 
-    fetch('https://api.github.com/user/repos?type=public', { headers })
+    fetch('https://api.github.com/graphql', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${token}`,
+      },
+      body: JSON.stringify({ query }),
+    })
       .then((response) => response.json())
       .then((data) => {
-        setRepos(data);
+        setRepos(data.data.viewer.repositories.nodes);
       })
       .catch((error) => {
         console.error('Error fetching data:', error);
       });
   }, []);
+
   
     return(
         <section className='project'>
