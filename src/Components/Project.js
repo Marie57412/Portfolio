@@ -9,12 +9,11 @@ import ImageProject6 from "../assets/Images Projets/bank-tree.jpeg";
 import ImageProject7 from "../assets/Images Projets/portfolioImg.png";
 
 function Project(){
-
   
   const [reposWithImages, setReposWithImages] = useState([]);
 
   useEffect(() => {
-    const token = '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';
+    const token = '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';
     const query = `
       query {
         viewer {
@@ -23,6 +22,7 @@ function Project(){
               id
               name
               description
+              url
               # Ajoutez d'autres champs si nécessaire
             }
           }
@@ -41,21 +41,21 @@ function Project(){
     .then((response) => response.json())
     .then((data) => {
       const repositories = data.data.viewer.repositories.nodes;
-
       // Associe chaque repository avec son image correspondante
       const reposMappedWithImages = repositories.map((repo, index) => ({
         id: repo.id,
         name: repo.name,
-        description: repo.description,
-        image: getCorrespondingImage(index), // Obtient l'image correspondante
+        url: repo.url,
+        image: getCorrespondingImage(index),
+        subtitle: getCorrespondingSubtitle(index) // Obtient l'image correspondante
       }));
-
+  
       setReposWithImages(reposMappedWithImages);
     })
     .catch((error) => {
       console.error('Error fetching data:', error);
     });
-}, []);
+  }, []);
 
   const dataWithImages = [
     { id: 1,  image: ImageProject1 },
@@ -88,10 +88,31 @@ function Project(){
     }
   };
 
+  const getCorrespondingSubtitle = (index) => {
+    switch (index) {
+      case 0:
+        return "html, sass, css";
+      case 1:
+        return "html, css, javascript";
+      case 2:
+        return "react, sass";
+      case 3:
+        return "html, css, seo";
+      case 4: 
+        return "html, javascript";
+      case 5:
+        return "css, react, redux";
+      case 6:
+        return "react, javascript, scss";
+
+      default:
+        return null;
+    }
+  };
   
 
     return(
-      <section className='project'>
+      <section id='project'>
       <h2>Mes projets</h2>
       <div className="card-container">
         {reposWithImages.map((repo) => (
