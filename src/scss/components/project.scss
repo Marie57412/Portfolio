@@ -1,7 +1,6 @@
 #project {
-    display: flex;
+    @include center;
     flex-direction: column;
-    align-items: center;
     margin-top: 10%;
     background: linear-gradient(120deg, #031163, #1fbfb8, #031163);
     padding-bottom: 7%;

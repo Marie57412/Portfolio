@@ -1,0 +1,43 @@
+.competance {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  .article-competence {
+    @include center;
+    flex-wrap: wrap;      
+  }
+  
+  .article-competence article {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 24px;
+    border: 1px solid #333;
+    background-color: #f0f0f0;
+    border-radius: 15px;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    @include center;
+    flex-direction: column-reverse;
+    gap: 10px;
+    height: 300px;
+    width: 300px;
+    
+  
+  .article-competence article:hover {
+    background-color: #333;
+    color: #fff;
+
+  }
+
+  .icon {
+    width: 50%;
+    height: 100px;
+  }
+
+  }

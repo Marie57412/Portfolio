@@ -1,20 +1,14 @@
 /*Bannière*/
 .section_banniere {
- 
+
   background: url(../../assets//palmier.avif);
   height: 20rem;
-    width: 100%;
+  width: 100%;
 }
 
-.texte-avatar{
-
-  display: flex;
+.texte-avatar {
+  @include center;
   flex-direction: row;
-  align-items: center;
-  justify-content: center;
-
-  
-
 }
 
 
@@ -39,15 +33,10 @@
     content: "";
     position: absolute;
     width: 10px;
-    /* Largeur de la flèche */
     height: 10px;
-    /* Hauteur de la flèche */
     background-color: #fff;
-    /* Fond de la flèche */
     border-left: 2px solid #000;
-    /* Bordure gauche de la flèche */
     border-bottom: 2px solid #000;
-    /* Bordure basse de la flèche */
     transform: rotate(-135deg);
     top: 78%;
     right: -8px;

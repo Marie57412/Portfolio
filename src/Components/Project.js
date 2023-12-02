@@ -13,7 +13,7 @@ function Project(){
   const [reposWithImages, setReposWithImages] = useState([]);
 
   useEffect(() => {
-    const token = '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';
+    const token = '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';
     const query = `
       query {
         viewer {
