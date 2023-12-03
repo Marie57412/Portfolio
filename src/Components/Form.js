@@ -16,7 +16,7 @@ function EmailForm() {
   }
 
   return (
-    <div className='form-section'>
+    <div id='form-section'>
       <h1>Contact</h1>
       <form onSubmit={sendEmail}>
         <input type="text" name="user_name" placeholder='veuillez saisir votre nom'/>

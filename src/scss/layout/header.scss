@@ -20,6 +20,9 @@ box-shadow: 10px 3px 5px rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: flex-end;
   flex-direction: row;
+  @media screen and (min-width: 375px) and (max-width: 600px){
+    display: none;
+  }
 }
 
 .nav a {

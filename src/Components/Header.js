@@ -8,7 +8,7 @@ function Header() {
                 <nav className="nav">
                     <a href="#project"><span></span>Projet</a>
                     <a href="#about-section"><span></span>A propos</a>
-                    <a href="/contact"><span></span>Contact</a>
+                    <a href="#form-section"><span></span>Contact</a>
                 </nav>
         </header>
     );

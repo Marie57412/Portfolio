@@ -9,6 +9,14 @@
 .texte-avatar {
   @include center;
   flex-direction: row;
+  @media screen and (min-width: 375px) and (max-width: 600px){
+    flex-direction: column-reverse;
+  }
+  img{
+    @media screen and (min-width: 375px) and (max-width: 600px){
+      width: 81%;
+    }
+  }
 }
 
 
@@ -27,6 +35,9 @@
   padding: 15px;
   width: 27%;
   margin: 20px;
+  @media screen and (min-width: 375px) and (max-width: 600px){
+    width: 68%;
+  }
 
   &::before {
 
@@ -40,5 +51,11 @@
     transform: rotate(-135deg);
     top: 78%;
     right: -8px;
+    @media screen and (min-width: 375px) and (max-width: 600px) {
+      transform: rotate(137deg);
+      top: -3%;
+      right: 131px;
+    }
   }
 }
+
