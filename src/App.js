@@ -6,6 +6,8 @@ import AvatarSection from './Components/Avatar';
 import Project from './Components/Project';
 import Competence from './Components/Competence';
 import About from './Components/Apropos';
+import Footer from './Components/Footer';
+import Form from './Components/Form';
 
 function App() {
   return (
@@ -17,7 +19,9 @@ function App() {
         <Project />
         <Competence />
         <About />
-      
+        <Form />
+        <Footer />
+
     </div>
   );
 }

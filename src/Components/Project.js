@@ -13,22 +13,21 @@ function Project(){
   const [reposWithImages, setReposWithImages] = useState([]);
 
   useEffect(() => {
-    const token = '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';
+    const token = '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';
     const query = `
-      query {
-        viewer {
-          repositories(first: 100, ownerAffiliations: OWNER, privacy: PUBLIC) {
-            nodes {
-              id
-              name
-              description
-              url
-              # Ajoutez d'autres champs si nécessaire
-            }
+    query {
+      viewer {
+        repositories(first: 100, ownerAffiliations: OWNER, privacy: PUBLIC) {
+          nodes {
+            id
+            name
+            url
+            description 
           }
         }
       }
-    `;
+    }
+  `;
 
     fetch('https://api.github.com/graphql', {
       method: 'POST',
@@ -40,12 +39,16 @@ function Project(){
     })
     .then((response) => response.json())
     .then((data) => {
+      console.log(data)
+      console.log(data.errors)
       const repositories = data.data.viewer.repositories.nodes;
-      // Associe chaque repository avec son image correspondante
+      
+
       const reposMappedWithImages = repositories.map((repo, index) => ({
         id: repo.id,
         name: repo.name,
         url: repo.url,
+        description: repo.description,
         image: getCorrespondingImage(index),
         subtitle: getCorrespondingSubtitle(index) // Obtient l'image correspondante
       }));
@@ -57,16 +60,7 @@ function Project(){
     });
   }, []);
 
-  const dataWithImages = [
-    { id: 1,  image: ImageProject1 },
-    { id: 2,  image: ImageProject2 },
-    { id: 3,  image: ImageProject3 },
-    { id: 4,  image: ImageProject4 },
-    { id: 5,  image: ImageProject5 },
-    { id: 6,  image: ImageProject6 }, 
-    { id: 7,  image: ImageProject7 },
-    // Ajoute d'autres objets avec les images correspondantes
-  ];
+
   const getCorrespondingImage = (index) => {
     switch (index) {
       case 0:
