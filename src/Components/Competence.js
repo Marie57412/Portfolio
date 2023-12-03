@@ -9,7 +9,7 @@ function Competence(){
             <section className="competance">
                 <h1>Compétences:</h1>
             <div className="article-competence">
-                <article className="icon-article">hTML<FontAwesomeIcon icon={faHtml5} className="icon"/></article>
+                <article className="icon-article">HTML<FontAwesomeIcon icon={faHtml5} className="icon"/></article>
                 <article className="icon-article">CSS <FontAwesomeIcon icon={faCss3Alt} className="icon" /></article>
                 <article className="icon-article">Javascript <FontAwesomeIcon icon={faJs} className="icon" /></article>
                 <article className="icon-article">React <FontAwesomeIcon icon={faReact} className="icon" /></article>

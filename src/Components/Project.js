@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import ProjectCard from "../Components/Card"
 import ImageProject1 from "../assets/Images Projets/1toa-heftiba-DQKerTsQwi0-unsplash1.jpg";
@@ -8,12 +9,13 @@ import ImageProject5 from "../assets/Images Projets/5product-school-dJICd7b_LlE-
 import ImageProject6 from "../assets/Images Projets/bank-tree.jpeg";
 import ImageProject7 from "../assets/Images Projets/portfolioImg.png";
 
+
 function Project(){
   
   const [reposWithImages, setReposWithImages] = useState([]);
 
   useEffect(() => {
-    const token = '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';
+    const token = process.env.REACT_APP_GITHUB_TOKEN;
     const query = `
     query {
       viewer {
