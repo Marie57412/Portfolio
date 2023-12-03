@@ -1,10 +1,10 @@
 import React from 'react';
 
-function ProjectCard({ repo }) {
+function ProjectCard({ repo, altText }) {
 
   return (
     <div className="card">
-      <img className='imgProject' src={repo.image} alt={repo.name} />
+      <img className='imgProject' src={repo.image} alt={altText} />
       <div className='content-card'>
       <h3>{repo.name}</h3>
       <p>{repo.description}</p>

@@ -112,7 +112,7 @@ function Project(){
       <h2>Mes projets</h2>
       <div className="card-container">
         {reposWithImages.map((repo) => (
-          <ProjectCard key={repo.id} repo={repo} />
+          <ProjectCard key={repo.id} repo={repo} altText={`Description de l'image ${repo.id}`}/>
         ))}
       </div>
     </section>

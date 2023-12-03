@@ -1,45 +1,64 @@
-#form-section{
-    @include center;
-    flex-direction: column;
-    margin-bottom: 68px;
-}
+#form-section {
+  @include center;
+  flex-direction: column;
+  margin-bottom: 68px;
 
-form {
+  h1 {
+    margin-bottom: 20px;
+  }
+
+  form {
     display: flex;
     flex-direction: column;
     width: 60%;
-  
-    input,
-    textarea,
-    button {
+
+    div {
+      display: flex;
+      flex-direction: column;
       margin-bottom: 15px;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      font-size: 16px;
-      height: 38px;
-    }
-  
-    input[type="submit"],
-    button {
-      background-color: #1976D2;
-      color: white;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-  
-    input[type="submit"]:hover,
-    button:hover {
-      background-color: #1565C0;
-    }
-  
-    textarea {
-      height: 120px;
+
+      label {
+        margin-bottom: 5px;
+      }
+
+      input,
+      textarea,
+      button {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+        height: 38px;
+      }
+
+      input[type="submit"],
+      button {
+        background-color: #1976D2;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      input[type="submit"]:hover,
+      button:hover {
+        background-color: #1565C0;
+      }
+
+      textarea {
+        height: 120px;
+      }
     }
   }
 
   input:focus,
-textarea:focus,
-button:focus {
-  outline: none;
+  textarea:focus,
+  button:focus {
+    outline: none;
+  }
+  button{
+    background-color: $navblue;
+    color: white;
+    font-size: 15px;
+    height: 53px;
+  }
 }

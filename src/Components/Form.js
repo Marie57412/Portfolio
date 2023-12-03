@@ -19,12 +19,21 @@ function EmailForm() {
     <div id='form-section'>
       <h1>Contact</h1>
       <form onSubmit={sendEmail}>
-        <input type="text" name="user_name" placeholder='veuillez saisir votre nom'/>
-        <input type="email" name="user_email" placeholder='veuillez saisir votre email' />
-        <textarea name="message" placeholder='saisissez votre message'/>
+        <div>
+          <label htmlFor="user_name">Nom :</label>
+          <input type="text" name="user_name" id="user_name" placeholder='Veuillez saisir votre nom' />
+        </div>
+        <div>
+          <label htmlFor="user_email">Email :</label>
+          <input type="email" name="user_email" id="user_email" placeholder='Veuillez saisir votre email' />
+        </div>
+        <div>
+          <label htmlFor="message">Message :</label>
+          <textarea name="message" id="message" placeholder='Saisissez votre message'></textarea>
+        </div>
         <button type="submit">Envoyer</button>
       </form>
-      {successMessage && <p>{successMessage}</p>} 
+      {successMessage && <p>{successMessage}</p>}
     </div>
   );
 }
