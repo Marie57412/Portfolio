@@ -1,13 +1,13 @@
 
 import React, { useState, useEffect } from 'react';
 import ProjectCard from "../Components/Card"
-import ImageProject1 from "../assets/Images Projets/1toa-heftiba-DQKerTsQwi0-unsplash1.jpg";
-import ImageProject2 from "../assets/Images Projets/2sophie-bluel1689172633206.png";
-import ImageProject3 from "../assets/Images Projets/3AboutBanner.jpg";
+import ImageProject1 from "../assets/Images Projets/1toa-heftiba-DQKerTsQwi0-unsplash1.webp";
+import ImageProject2 from "../assets/Images Projets/2sophie-bluel1689172633206.webp";
+import ImageProject3 from "../assets/Images Projets/3AboutBanner.webp";
 import ImageProject4 from "../assets/Images Projets/4nina.webp";
-import ImageProject5 from "../assets/Images Projets/5product-school-dJICd7b_LlE-unsplash.png";
-import ImageProject6 from "../assets/Images Projets/bank-tree.jpeg";
-import ImageProject7 from "../assets/Images Projets/portfolioImg.png";
+import ImageProject5 from "../assets/Images Projets/5product-school-dJICd7b_LlE-unsplash.webp";
+import ImageProject6 from "../assets/Images Projets/bank-tree.webp";
+import ImageProject7 from "../assets/Images Projets/portfolioImg.webp";
 
 
 function Project(){
