@@ -9,12 +9,12 @@
 .texte-avatar {
   @include center;
   flex-direction: row;
-  @media screen and (min-width: 375px) and (max-width: 600px){
+  @media screen and (min-width: 320px) and (max-width: 600px){
     flex-direction: column-reverse;
   }
   img{
-    @media screen and (min-width: 375px) and (max-width: 600px){
-      width: 81%;
+    @media screen and (min-width: 320px) and (max-width: 600px){
+      width: 75%;
     }
   }
 }
@@ -35,8 +35,8 @@
   padding: 15px;
   width: 27%;
   margin: 20px;
-  @media screen and (min-width: 375px) and (max-width: 600px){
-    width: 68%;
+  @media screen and (min-width: 320px) and (max-width: 600px){
+    width: 67%;
   }
 
   &::before {
